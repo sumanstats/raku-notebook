@@ -28,11 +28,12 @@ RUN buildDeps="gcc \
     && git clone https://github.com/ugexe/zef.git \
     && cd zef \
     && perl6 -I. bin/zef install . && cd .. && rm -rf zef \
-    && zef install Linenoise App::Mi6 \
+    && zef install Linenoise App::Mi6 App::Prove6 \
     && wget https://github.com/jgm/pandoc/releases/download/${PANDOC}/pandoc-${PANDOC}-1-amd64.deb \
     && dpkg -i pandoc-${PANDOC}-1-amd64.deb && rm pandoc-${PANDOC}-1-amd64.deb \
     && apt-get purge -y --auto-remove $buildDeps
-    
+
+#For raku testing run ===> $ prove6 --lib t/
     
 CMD ["perl6", "--version"]
 
