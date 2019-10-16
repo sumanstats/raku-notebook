@@ -1,0 +1,11 @@
+version: 1.0.{build}
+image: ubuntu1804
+services:
+  - docker
+
+
+build_script:
+  - docker build -t rakunotebook .
+
+test_script:
+  - docker run -d -p 8888:8888 rakunotebook /bin/bash
