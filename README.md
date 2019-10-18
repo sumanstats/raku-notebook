@@ -1,9 +1,9 @@
 This repository builds two images in DockerHub.
 
 
-Image            | Description                               | Perl 6 version | Imagedata 
+Image            | Description                               | raku version | Imagedata 
 ---------------- | ----------------------------------------- | -------------- | ---------
-[raku notebook](https://hub.docker.com/r/sumankhanal/raku-notebook/) | Docker image with Perl 6 notebook with [Jupyter](http://jupyter.org/). | [![Perl 6](https://img.shields.io/badge/raku-2019.07.1-blue.svg)](https://rakudo.perl6.org/downloads/star/) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Github Stars](https://img.shields.io/github/stars/sumandoc/raku-notebook.svg?style=social&label=Github)](https://github.com/sumanstats/raku-notebook)
+[raku notebook](https://hub.docker.com/r/sumankhanal/raku-notebook/) | Docker image with raku notebook with [Jupyter](http://jupyter.org/). | [![raku](https://img.shields.io/badge/raku-2019.07.1-blue.svg)](https://rakudo.org/downloads/star/) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Github Stars](https://img.shields.io/github/stars/sumandoc/raku-notebook.svg?style=social&label=Github)](https://github.com/sumanstats/raku-notebook)
 [raku](https://hub.docker.com/r/sumankhanal/raku/) | Contains latest [raku from github](https://github.com/rakudo/rakudo). | [![raku](https://img.shields.io/badge/raku->=2019.07.1-blue.svg)](https://github.com/rakudo/rakudo) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 
