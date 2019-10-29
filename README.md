@@ -29,11 +29,11 @@ Type `docker run -it -p 8888:8888 sumankhanal/raku-notebook` in the docker termi
 
 There you are running the notebook.
 
-For detailed instructions, [see here](https://sumandoc.netlify.com/post/raku_notebook/).
+For detailed instructions, [see here](https://sumankhanal.netlify.com/post/raku_notebook/).
 
 
 Once you follow the above instructions, you will get notebook as shown here:
 
-![](https://github.com/sumandoc/raku-notebook/blob/master/imgs/notebook.PNG)
+![](https://github.com/sumanstats/raku-notebook/blob/master/imgs/notebook.PNG)
 
 
