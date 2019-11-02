@@ -2,7 +2,7 @@
 
 [![raku](https://img.shields.io/badge/raku-v6.d-blue.svg)](https://rakudo.org/downloads/star/)
 [![rakudo](https://img.shields.io/badge/rakudo-2019.07.1-blue.svg)](https://rakudo.org/downloads/star/)
-[![Build Status](https://travis-ci.org/sumanstats/raku-notebook.svg?branch=master)](https://travis-ci.org/sumanstats/raku-notebook)
+[![Build Status](https://travis-ci.com/sumanstats/raku-notebook.svg?branch=master)](https://travis-ci.com/sumanstats/raku-notebook)
 
 
 This is dockerfile for running a docker container with **raku** kernel in jupyter notebook. Also contains [asciinema](https://asciinema.org/) to record and share your terminal sessions, the right way. Enjoy a lightweight, purely text-based approach to terminal recording.
