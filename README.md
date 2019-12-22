@@ -1,7 +1,7 @@
 # raku-notebook
 
 [![raku](https://img.shields.io/badge/raku-v6.d-blue.svg)](https://rakudo.org/downloads/star/)
-[![rakudo](https://img.shields.io/badge/rakudo-2019.07.1-blue.svg)](https://rakudo.org/downloads/star/)
+[![rakudo](https://img.shields.io/badge/rakudo-2019.11-blue.svg)](https://rakudo.org/downloads/star/)
 [![Build Status](https://travis-ci.com/sumanstats/raku-notebook.svg?branch=master)](https://travis-ci.com/sumanstats/raku-notebook)
 
 
