@@ -20,8 +20,8 @@ RUN apt-get update \
     wget libzmq3-dev ca-certificates \
     python3-pip python3-setuptools \
     && rm -rf /var/lib/apt/lists/* && pip3 install jupyter notebook asciinema jupyterlab pyscaffold --no-cache-dir \
-    && zef install Jupyter::Kernel --force-test \
-    && jupyter-kernel.p6 --generate-config \
+    && zef -v install git://github.com/sumanstats/p6-jupyter-kernel.git \ # Jupyter::Kernel --force-test \
+    && jupyter-kernel.raku --generate-config \
     && ln -s /usr/share/perl6/site/bin/* /usr/local/bin
 
 ENV TINI_VERSION v0.18.0
