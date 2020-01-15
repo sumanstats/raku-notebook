@@ -17,7 +17,7 @@ Also contains [PyScaffold](https://github.com/blue-yonder/pyscaffold) for buildi
 
 + Click here: [![Binder](imgs/binder-logo.svg)](https://mybinder.org/v2/gh/sumanstats/raku-notebook/master)
 + Wait a few seconds.
-+ Select `New` -> `raku`
++ Select `New` -> `Raku`
 
 And dive into the raku notebook.
 
@@ -35,5 +35,7 @@ For detailed instructions, [see here](https://sumankhanal.netlify.com/post/raku_
 Once you follow the above instructions, you will get notebook as shown here:
 
 ![](https://github.com/sumanstats/raku-notebook/blob/master/imgs/notebook.PNG)
+
+**Happy coding** !
 
 
