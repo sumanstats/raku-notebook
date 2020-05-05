@@ -1,8 +1,9 @@
-FROM sumankhanal/rakudo:2020.02.1
+FROM sumankhanal/rakudo:2020.05
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
       
 #Enabling Binder..................................
+
 ENV NB_USER suman
 ENV NB_UID 1000
 ENV HOME /home/${NB_USER}

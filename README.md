@@ -1,15 +1,15 @@
-# raku-notebook
+# Raku-notebook
 
-[![raku](https://img.shields.io/badge/raku-v6.d-blue.svg)](https://rakudo.org/downloads/star/)
-[![rakudo](https://img.shields.io/badge/rakudo-2020.02.1-blue.svg)](https://rakudo.org/downloads/star/)
+[![Raku](https://img.shields.io/badge/Raku-v6.d-blue.svg)](https://rakudo.org/downloads/star/)
+[![Rakudo](https://img.shields.io/badge/Rakudo-2020.05-blue.svg)](https://rakudo.org/downloads/star/)
 [![Build Status](https://travis-ci.com/sumanstats/raku-notebook.svg?branch=master)](https://travis-ci.com/sumanstats/raku-notebook)
 
 
-This is dockerfile for running a docker container with **raku** kernel in jupyter notebook. Also contains [asciinema](https://asciinema.org/) to record and share your terminal sessions, the right way. Enjoy a lightweight, purely text-based approach to terminal recording.
+This is dockerfile for running a docker container with **Raku** kernel in jupyter notebook. Also contains [asciinema](https://asciinema.org/) to record and share your terminal sessions, the right way. Enjoy a lightweight, purely text-based approach to terminal recording.
 
-Contains [App::Mi6](https://github.com/skaji/mi6) for building skeleton of **raku** packages.
+Contains [App::Mi6](https://github.com/skaji/mi6) for building skeleton of **Raku** packages.
 
-Also contains [PyScaffold](https://github.com/blue-yonder/pyscaffold) for building skeleton of python packages.
+Also contains [PyScaffold](https://github.com/blue-yonder/pyscaffold) for building skeleton of Python packages.
 
 
 ## How to run using [Binder](https://mybinder.org/) ?
@@ -19,7 +19,7 @@ Also contains [PyScaffold](https://github.com/blue-yonder/pyscaffold) for buildi
 + Wait a few seconds.
 + Select `New` -> `Raku`
 
-And dive into the raku notebook.
+And dive into the **Raku notebook**.
 
 
 ## How to run this image in your local computer ?
