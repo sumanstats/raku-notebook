@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.com/sumanstats/raku-notebook.svg?branch=master)](https://travis-ci.com/sumanstats/raku-notebook)
 
 
-<a href="https://raku.org/"><img src="imgs/raku_jupyter.png" width="240" height="120" align="right"></a>
+<a href="https://raku.org/"><img src="imgs/raku_jupyter.png" width="260" height="120" align="right"></a>
 
 
 
@@ -19,7 +19,7 @@ Also contains [PyScaffold](https://github.com/blue-yonder/pyscaffold) for buildi
 ## How to run using [Binder](https://mybinder.org/) ?
 
 
-+ Click the Binder icon <a href="https://mybinder.org/v2/gh/sumanstats/raku-notebook/master"><img src="imgs/binder-logo.svg" width="250" height="100" align="right"></a>
++ Click the Binder icon <a href="https://mybinder.org/v2/gh/sumanstats/raku-notebook/master"><img src="imgs/binder-logo.svg" width="260" height="150" align="right"></a>
 
 + Wait a few seconds.
 + Select `New` -> `Raku`
