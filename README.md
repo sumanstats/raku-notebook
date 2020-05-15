@@ -1,11 +1,15 @@
-# Raku-notebook
+# Raku notebook
 
 [![Raku](https://img.shields.io/badge/Raku-v6.d-blue.svg)](https://rakudo.org/downloads/star/)
-[![Rakudo](https://img.shields.io/badge/Rakudo-2020.05-blue.svg)](https://rakudo.org/downloads/star/)
+[![Rakudo](https://img.shields.io/badge/Rakudo-2020.05.1-blue.svg)](https://rakudo.org/downloads/star/)
 [![Build Status](https://travis-ci.com/sumanstats/raku-notebook.svg?branch=master)](https://travis-ci.com/sumanstats/raku-notebook)
 
 
-This is dockerfile for running a docker container with **Raku** kernel in jupyter notebook. Also contains [asciinema](https://asciinema.org/) to record and share your terminal sessions, the right way. Enjoy a lightweight, purely text-based approach to terminal recording.
+<a href="https://raku.org/"><img src="imgs/raku_jupyter.png" width="190" height="120" align="right"></a>
+
+
+
+This is a docker container with **Raku** kernel in jupyter notebook. Also contains [asciinema](https://asciinema.org/) to record and share your terminal sessions, the right way. Enjoy a lightweight, purely text-based approach to terminal recording.
 
 Contains [App::Mi6](https://github.com/skaji/mi6) for building skeleton of **Raku** packages.
 
@@ -29,7 +33,7 @@ Type `docker run -it -p 8888:8888 sumankhanal/raku-notebook` in the docker termi
 
 There you are running the notebook.
 
-For detailed instructions, [see here](https://sumankhanal.netlify.com/post/raku_notebook/).
+For detailed instructions, [see here](https://sumankhanal.netlify.app/post/raku/raku_notebook/).
 
 
 Once you follow the above instructions, you will get notebook as shown here:
