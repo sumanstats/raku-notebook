@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.com/sumanstats/raku-notebook.svg?branch=master)](https://travis-ci.com/sumanstats/raku-notebook)
 
 
-<a href="https://raku.org/"><img src="imgs/raku_jupyter.png" width="260" height="120" align="right"></a>
+<a href="https://raku.org/"><img src="imgs/raku_jupyter.png" width="300" height="120" align="right"></a>
 
 
 
