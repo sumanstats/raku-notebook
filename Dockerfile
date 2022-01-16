@@ -17,12 +17,14 @@ RUN adduser --disabled-password \
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
 
-RUN gpg --keyserver keyring.debian.org --recv-keys 648ACFD622F3D138 && \
-   gpg --keyserver keyring.debian.org --recv-keys 0E98404D386FA1D9 && \
-   gpg --keyserver keyring.debian.org --recv-keys 648ACFD622F3D138 && \
-   gpg --keyserver keyring.debian.org --recv-keys 0E98404D386FA1D9 && \
-   gpg --keyserver keyring.debian.org --recv-keys 112695A0E562B32A && \
-   gpg --keyserver keyring.debian.org --recv-keys 54404762BBB6E853
+RUN apt-get update \
+    && apt-get install -y gnupg && \
+    gpg --keyserver keyring.debian.org --recv-keys 648ACFD622F3D138 && \
+    gpg --keyserver keyring.debian.org --recv-keys 0E98404D386FA1D9 && \
+    gpg --keyserver keyring.debian.org --recv-keys 648ACFD622F3D138 && \
+    gpg --keyserver keyring.debian.org --recv-keys 0E98404D386FA1D9 && \
+    gpg --keyserver keyring.debian.org --recv-keys 112695A0E562B32A && \
+    gpg --keyserver keyring.debian.org --recv-keys 54404762BBB6E853
 
 RUN apt-get update \
     && apt-get install -y build-essential \
