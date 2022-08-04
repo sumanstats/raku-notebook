@@ -1,4 +1,4 @@
-FROM sumankhanal/rakudo:latest
+FROM sumankhanal/rakudo:2022.07
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
       
