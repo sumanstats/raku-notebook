@@ -1,4 +1,4 @@
-FROM sumankhanal/rakudo:2022.07
+FROM sumankhanal/rakudo:2022.12
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
       
@@ -22,7 +22,7 @@ RUN apt-get update \
     wget libzmq3-dev ca-certificates \
     python3-pip python3-setuptools \
     && rm -rf /var/lib/apt/lists/* && pip3 install jupyter notebook asciinema jupyterlab pyscaffold --no-cache-dir \
-    && zef -v install git://github.com/bduggan/p6-jupyter-kernel.git --force-test \ 
+    && zef -v install git://github.com/bduggan/raku-jupyter-kernel.git --force-test \ 
     && zef install Pod::To::HTML \
     && jupyter-kernel.raku --generate-config \
     && ln -s /usr/share/perl6/site/bin/* /usr/local/bin
