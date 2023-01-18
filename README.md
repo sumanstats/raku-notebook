@@ -2,7 +2,7 @@
 
 [![Raku](https://img.shields.io/badge/Raku-v6.d-blue.svg)](https://rakudo.org/downloads/star/)
 [![Rakudo](https://img.shields.io/badge/Rakudo-2022.12-blue.svg)](https://github.com/rakudo/rakudo/releases/tag/2022.12)
-[![Build Status](https://travis-ci.com/sumanstats/raku-notebook.svg?branch=master)](https://travis-ci.com/sumanstats/raku-notebook)
+[![Build status](https://ci.appveyor.com/api/projects/status/1afb4ovb4481ni0r?svg=true)](https://ci.appveyor.com/project/sumanstats/raku-notebook)
 
 
 <a href="https://raku.org/"><img src="imgs/raku_jupyter.png" width="300" height="120" align="right"></a>
