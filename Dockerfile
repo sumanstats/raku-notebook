@@ -29,11 +29,18 @@ RUN apt-get update \
     && jupyter-kernel.raku --generate-config \
     && ln -s /usr/share/perl6/site/bin/* /usr/local/bin
 
-ENV TINI_VERSION v0.18.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
-RUN chmod +x /usr/bin/tini 
-ENTRYPOINT ["/usr/bin/tini", "--"]
+#Enabling Binder..................................
 
+ARG NB_USER=suman
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${NB_UID} \
+    ${NB_USER}
+    
 
 
 #For enabling binder..........................
