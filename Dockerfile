@@ -1,4 +1,4 @@
-FROM sumankhanal/rakudo:e021be33d0f2 # sha tag of image as recommended in binder 
+FROM sumankhanal/rakudo:e021be33d0f2 
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
       
