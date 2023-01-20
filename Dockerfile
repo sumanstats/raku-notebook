@@ -1,11 +1,13 @@
-FROM sumankhanal/rakudo:2022.12
+FROM sumankhanal/rakudo:e021be33d0f2 # sha tag of image as recommended in binder 
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
       
 #Enabling Binder..................................
 
-ENV NB_USER suman
-ENV NB_UID 1000
+ARG NB_USER=suman
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
 ENV HOME /home/${NB_USER}
 RUN adduser --disabled-password \
     --gecos "Default user" \
