@@ -1,4 +1,4 @@
-FROM sumankhanal/rakudo:e021be33d0f2
+FROM sumankhanal/rakudo:e021be33d0f20af3928b611b21c6e5780f19ccf6d24fbc9102ada2108a73c101
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
       
