@@ -1,18 +1,5 @@
 FROM sumankhanal/rakudo@sha256:e021be33d0f20af3928b611b21c6e5780f19ccf6d24fbc9102ada2108a73c101
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
-
-      
-#Enabling Binder..................................
-
-ARG NB_USER=suman
-ARG NB_UID=1000
-ENV USER ${NB_USER}
-ENV NB_UID ${NB_UID}
-ENV HOME /home/${NB_USER}
-RUN adduser --disabled-password \
-    --gecos "Default user" \
-    --uid ${NB_UID} \
-    ${NB_USER}
     
 #..............................................
       
