@@ -16,7 +16,7 @@ Contains [App::Mi6](https://github.com/skaji/mi6) for building skeleton of **Rak
 ## How to run using [Binder](https://mybinder.org/) ?
 
 
-+ Click the Binder icon <a href="https://mybinder.org/v2/gh/sumanstats/raku-notebook/master"><img src="imgs/binder-logo.svg" width="260" height="150" align="right"></a>
++ Click the Binder icon <a href="https://mybinder.org/v2/gh/sumanstats/raku-notebook/main"><img src="imgs/binder-logo.svg" width="260" height="150" align="right"></a>
 
 + Wait a few seconds.
 + Select `New` -> `Raku`
@@ -36,7 +36,7 @@ For detailed instructions, [see here](https://sumankhanal.netlify.app/post/raku/
 
 Once you follow the above instructions, you will get notebook as shown here:
 
-![](https://github.com/sumanstats/raku-notebook/blob/master/imgs/notebook.PNG)
+![](https://github.com/sumanstats/raku-notebook/blob/main/imgs/notebook.PNG)
 
 Feedback welcome !
 
