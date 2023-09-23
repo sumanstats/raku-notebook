@@ -11,8 +11,8 @@ RUN apt-get update \
     && apt-get install -y build-essential cmake ninja-build \
     wget libzmq3-dev ca-certificates \
     python3-pip python3-setuptools \
-    && rm -rf /var/lib/apt/lists/* && pip3 install --no-cache-dir jupyter 
-    notebook jupyterlab \
+    && rm -rf /var/lib/apt/lists/* && pip3 install --no-cache-dir \
+    jupyter notebook jupyterlab \
     && zef -v install git://github.com/bduggan/raku-jupyter-kernel.git \ 
     && zef install Pod::To::HTML \
     && jupyter-kernel.raku --generate-config \
