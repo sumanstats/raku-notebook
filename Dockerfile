@@ -1,4 +1,4 @@
-FROM sumankhanal/rakudo@sha256:e021be33d0f20af3928b611b21c6e5780f19ccf6d24fbc9102ada2108a73c101
+FROM sumankhanal/rakudo@sha256:ab0ec59c6456c9ad733b288bca3ad15e1199eae880ddfadf66bbfe244d272e16
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
     
 #..............................................
@@ -10,7 +10,7 @@ RUN apt-get update \
     && apt-get install -y build-essential \
     wget libzmq3-dev ca-certificates \
     python3-pip python3-setuptools \
-    && rm -rf /var/lib/apt/lists/* && pip3 install jupyter notebook asciinema jupyterlab pyscaffold --no-cache-dir \
+    && rm -rf /var/lib/apt/lists/* && pip3 install jupyter notebook jupyterlab --no-cache-dir \
     && zef -v install git://github.com/bduggan/raku-jupyter-kernel.git --force-test \ 
     && zef install Pod::To::HTML \
     && jupyter-kernel.raku --generate-config \

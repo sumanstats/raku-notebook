@@ -9,12 +9,9 @@
 
 
 
-This is a docker container with **Raku** kernel in jupyter notebook. Also contains [asciinema](https://asciinema.org/) to record and share your terminal sessions, the right way. Enjoy a lightweight, purely text-based approach to terminal recording.
+This is a docker container with **Raku** kernel in jupyter notebook.
 
 Contains [App::Mi6](https://github.com/skaji/mi6) for building skeleton of **Raku** packages.
-
-Also contains [PyScaffold](https://github.com/blue-yonder/pyscaffold) for building skeleton of Python packages.
-
 
 ## How to run using [Binder](https://mybinder.org/) ?
 
