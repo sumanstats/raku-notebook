@@ -2,24 +2,27 @@ FROM sumankhanal/rakudo@sha256:ab0ec59c6456c9ad733b288bca3ad15e1199eae880ddfadf6
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
     
 #..............................................
-      
+
+
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
 
 RUN apt-get update \
-    && apt-get install -y build-essential \
+    && apt-get install -y build-essential cmake ninja-build \
     wget libzmq3-dev ca-certificates \
     python3-pip python3-setuptools \
-    && rm -rf /var/lib/apt/lists/* && pip3 install jupyter notebook jupyterlab --no-cache-dir \
-    && zef -v install git://github.com/bduggan/raku-jupyter-kernel.git --force-test \ 
+    && rm -rf /var/lib/apt/lists/* && pip3 install --no-cache-dir jupyter 
+    notebook jupyterlab \
+    && zef -v install git://github.com/bduggan/raku-jupyter-kernel.git \ 
     && zef install Pod::To::HTML \
     && jupyter-kernel.raku --generate-config \
     && ln -s /usr/share/perl6/site/bin/* /usr/local/bin
 
 #Enabling Binder..................................
 
-ARG NB_USER=suman
-ARG NB_UID=1000
+
+ENV NB_USER=suman
+ENV NB_UID=1000
 ENV USER ${NB_USER}
 ENV NB_UID ${NB_UID}
 ENV HOME /home/${NB_USER}
@@ -28,7 +31,6 @@ RUN adduser --disabled-password \
     --uid ${NB_UID} \
     ${NB_USER}
     
-
 
 #For enabling binder..........................
 COPY ./raku-notebooks/ ${HOME}
