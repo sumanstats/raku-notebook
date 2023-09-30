@@ -11,7 +11,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     build-essential cmake ninja-build \
     wget libzmq3-dev ca-certificates jupyter \
-    jupyter-notebook python3-jupyterlab-server \
+    jupyter-notebook jupyterhub \
     && rm -rf /var/lib/apt/lists/* \ 
     && zef -v install https://github.com/bduggan/raku-jupyter-kernel.git \ 
     && zef -v install https://github.com/sumanstats/Statistics.git \
