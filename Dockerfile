@@ -12,7 +12,7 @@ RUN apt-get update \
     build-essential cmake ninja-build \
     wget libzmq3-dev ca-certificates \
     python3-notebook python3-jupyterlab-server \
-    && rm -rf /var/lib/apt/lists/* \ 
+   # && rm -rf /var/lib/apt/lists/* \ 
     && zef -v install https://github.com/bduggan/raku-jupyter-kernel.git \ 
     && zef -v install https://github.com/sumanstats/Statistics.git \
     && zef install Pod::To::HTML \
