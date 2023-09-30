@@ -1,4 +1,4 @@
-FROM sumankhanal/rakudo@sha256:0eb8bf66acfa09968794f8cd455f0d52014ed87034da8a7a322ea195b146c774
+FROM sumankhanal/rakudo@sha256:aee332b61c422d31d24f1f1362a27b3a4ce064848491f741936402034bb0240c
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
     
 #..............................................
@@ -10,9 +10,9 @@ ENV PATH=$PATH:/usr/share/perl6/site/bin
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     build-essential cmake ninja-build \
-    wget libzmq3-dev ca-certificates \
-    python3-notebook python3-jupyterlab-server \
-   # && rm -rf /var/lib/apt/lists/* \ 
+    wget libzmq3-dev ca-certificates jupyter \
+    jupyter-notebook python3-jupyterlab-server \
+    && rm -rf /var/lib/apt/lists/* \ 
     && zef -v install https://github.com/bduggan/raku-jupyter-kernel.git \ 
     && zef -v install https://github.com/sumanstats/Statistics.git \
     && zef install Pod::To::HTML \
