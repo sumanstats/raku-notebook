@@ -8,11 +8,11 @@ ENV PATH=$PATH:/usr/share/perl6/site/bin
 
 
 RUN apt-get update \
-    && apt-get install -y build-essential cmake ninja-build \
+    && apt-get install -y --no-install-recommends \
+    build-essential cmake ninja-build \
     wget libzmq3-dev ca-certificates \
-    python3-pip python3-setuptools \
-    && rm -rf /var/lib/apt/lists/* && pip3 install --no-cache-dir \
-    jupyter notebook jupyterlab \
+    python3-notebook python3-jupyterlab-server \
+    && rm -rf /var/lib/apt/lists/* \ 
     && zef -v install https://github.com/bduggan/raku-jupyter-kernel.git \ 
     && zef -v install https://github.com/sumanstats/Statistics.git \
     && zef install Pod::To::HTML \
