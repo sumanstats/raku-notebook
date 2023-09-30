@@ -1,4 +1,4 @@
-FROM sumankhanal/rakudo@sha256:ab0ec59c6456c9ad733b288bca3ad15e1199eae880ddfadf66bbfe244d272e16
+FROM sumankhanal/rakudo@sha256:0eb8bf66acfa09968794f8cd455f0d52014ed87034da8a7a322ea195b146c774
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
     
 #..............................................
