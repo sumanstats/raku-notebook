@@ -8,8 +8,7 @@ ENV PATH=$PATH:/usr/share/perl6/site/bin
 
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-    build-essential cmake ninja-build \
+    && apt-get install -y build-essential cmake ninja-build \
     wget libzmq3-dev ca-certificates jupyter jupyter-server \
     jupyter-notebook jupyterhub \
     && rm -rf /var/lib/apt/lists/* \ 
