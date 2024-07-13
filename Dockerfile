@@ -9,7 +9,8 @@ ENV PATH=/root/miniconda3/bin:/usr/share/perl6/site/bin:$PATH
 
 
 RUN apt-get update \
-    && apt-get install -y build-essential cmake ninja-build wget libzmq3-dev \
+    && apt-get install -y --no-install-recommends \
+    build-essential cmake ninja-build wget libzmq3-dev \
     && rm -rf /var/lib/apt/lists/* \ 
     && wget https://repo.anaconda.com/miniconda/Miniconda3-py312_24.5.0-0-Linux-x86_64.sh -O miniconda.sh \
     && mkdir -p /root/.conda \
@@ -19,7 +20,7 @@ RUN apt-get update \
     && zef -v install https://github.com/bduggan/raku-jupyter-kernel.git \ 
     # && zef install Pod::To::HTML \
     && jupyter-kernel.raku --generate-config \
-    && jupyter notebook --generate-config \
+    && jupyter notebook --generate-config
     # && ln -s /usr/share/perl6/site/bin/* /usr/local/bin
     
 
@@ -31,10 +32,7 @@ ENV NB_UID=1000
 ENV USER ${NB_USER}
 ENV NB_UID ${NB_UID}
 ENV HOME /home/${NB_USER}
-RUN adduser --disabled-password \
-    --gecos "Default user" \
-    --uid ${NB_UID} \
-    ${NB_USER}
+RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
     
 
 #For enabling binder..........................
@@ -42,7 +40,7 @@ COPY ./raku-notebooks/ ${HOME}
 
 USER root
 RUN chown -R ${NB_UID} ${HOME}
-USER ${NB_USER}
+USER ${NB_USER} 
 WORKDIR ${HOME}
 #..............................................
 
