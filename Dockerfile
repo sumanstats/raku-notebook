@@ -9,7 +9,7 @@ ENV PATH=/root/miniconda3/bin:/usr/share/perl6/site/bin:$PATH
 
 
 RUN apt-get update \
-    && apt-get install -y build-essential cmake ninja-build wget \
+    && apt-get install -y build-essential cmake ninja-build wget libzmq3-dev \
     && rm -rf /var/lib/apt/lists/* \ 
     && wget https://repo.anaconda.com/miniconda/Miniconda3-py312_24.5.0-0-Linux-x86_64.sh -O miniconda.sh \
     && mkdir -p /root/.conda \
