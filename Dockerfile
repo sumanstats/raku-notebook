@@ -10,7 +10,8 @@ ENV PATH=/root/miniconda3/bin:/usr/share/perl6/site/bin:$PATH
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-    build-essential cmake ninja-build wget libzmq3-dev \
+    gcc make cmake ninja-build wget libzmq3-dev \ 
+    # gcc make used for raku kernel dependencies with compiled C code 
     && rm -rf /var/lib/apt/lists/* \ 
     && wget https://repo.anaconda.com/miniconda/Miniconda3-py312_24.5.0-0-Linux-x86_64.sh -O miniconda.sh \
     && mkdir -p /root/.conda \
@@ -22,7 +23,6 @@ RUN apt-get update \
     && jupyter-kernel.raku --generate-config \
     && jupyter notebook --generate-config \
     && conda clean -a
-    # && ln -s /usr/share/perl6/site/bin/* /usr/local/bin
     
 
 #Enabling Binder..................................
@@ -48,4 +48,4 @@ WORKDIR ${HOME}
 
 EXPOSE 8888
 
-CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+CMD ["jupyter", "notebook", "--NotebookApp.default_url=/lab/", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
