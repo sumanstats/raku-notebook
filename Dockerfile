@@ -19,7 +19,7 @@ RUN apt-get update \
     && zef -v install https://github.com/bduggan/raku-jupyter-kernel.git \ 
     # && zef install Pod::To::HTML \
     && jupyter-kernel.raku --generate-config \
-    && jupyter notebook --generate-config \
+    && jupyter notebook --generate-config
     # && ln -s /usr/share/perl6/site/bin/* /usr/local/bin
     
 
