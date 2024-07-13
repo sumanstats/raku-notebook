@@ -14,7 +14,6 @@ RUN apt-get update \
     jupyter-notebook jupyterhub \
     && rm -rf /var/lib/apt/lists/* \ 
     && zef -v install https://github.com/bduggan/raku-jupyter-kernel.git \ 
-    && zef -v install https://github.com/sumanstats/Statistics.git \
     # && zef install Pod::To::HTML \
     && jupyter-kernel.raku --generate-config \
     && jupyter notebook --generate-config \
