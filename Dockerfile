@@ -28,24 +28,24 @@ RUN apt-get update \
 #Enabling Binder..................................
 
 
-ENV NB_USER=suman
-ENV NB_UID=1000
-ENV USER ${NB_USER}
-ENV NB_UID ${NB_UID}
-ENV HOME /home/${NB_USER}
-RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
+# ENV NB_USER=suman
+# ENV NB_UID=1000
+# ENV USER ${NB_USER}
+# ENV NB_UID ${NB_UID}
+# # ENV HOME $HOME/${NB_USER}
+# RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
     
 
-#For enabling binder..........................
-COPY ./raku-notebooks/ ${HOME}
+# # #For enabling binder..........................
+# # COPY ./raku-notebooks/ ${HOME}
 
-USER root
-RUN chown -R ${NB_UID} ${HOME}
-USER ${NB_USER} 
-WORKDIR ${HOME}
-#..............................................
+# # USER root
+# # RUN chown -R ${NB_UID} ${HOME}
+# USER ${NB_USER} 
+# WORKDIR ${HOME}
+# #..............................................
 
-
+# Make port 8888 available to the world outside this container
 EXPOSE 8888
 
-ENTRYPOINT ["jupyter", "notebook", "--NotebookApp.default_url=/lab/", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+CMD ["jupyter", "notebook", "--NotebookApp.default_url=/lab/", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
