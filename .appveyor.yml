@@ -4,8 +4,8 @@ image:
 
 branches:
   only:
-    # - main
-    - testing
+    - main
+    #- testing
 
 environment:
   global:
