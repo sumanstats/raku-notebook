@@ -3,12 +3,6 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
     
 #..............................................
 
-ENV NB_USER=suman
-ENV NB_UID=1000
-ENV USER ${NB_USER}
-ENV NB_UID ${NB_UID}
-ENV HOME /home/${NB_USER}
-
 ENV PATH=/root/miniconda3/bin:/usr/share/perl6/site/bin:$PATH
 
 
@@ -29,20 +23,8 @@ RUN apt-get update \
     # \    && conda clean -a
     
 
-# #Enabling Binder..................................
 
-
-
-    
-RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
-# --disabled-password
-# #For enabling binder..........................
-COPY ./raku-notebooks/ ${HOME}
-
-# USER root
-# RUN chown -R ${NB_UID} ${HOME}
-
-WORKDIR ${HOME}
+WORKDIR /tmp
 # # #..............................................
 
 # # Make port 8888 available to the world outside this container
