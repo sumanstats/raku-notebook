@@ -6,18 +6,18 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 #..............................................
 
 
-ENV NB_USER=suman
-ENV NB_UID=1000
+ARG NB_USER=suman
+ARG NB_UID=1000
 ENV USER ${NB_USER}
 ENV NB_UID ${NB_UID}
 ENV HOME /home/${NB_USER}
 RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
-COPY ./raku-notebooks/ ${HOME}
+# COPY ./raku-notebooks/ ${HOME}
 
-USER root
+# USER root
 RUN chown -R ${NB_UID} ${HOME}   
 
 
-# USER ${NB_USER}
+USER ${NB_USER}
 
 
