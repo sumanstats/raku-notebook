@@ -17,8 +17,7 @@ RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER
 # USER root
 RUN chown -R ${NB_UID} ${HOME}   
 
-
+ENV PATH=/root/miniconda3/bin:/usr/share/perl6/site/bin:$PATH
 USER ${NB_USER}
 
-CMD ["jupyter", "notebook", "--NotebookApp.default_url=/lab/", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
 
