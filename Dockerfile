@@ -3,7 +3,11 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
     
 #..............................................
 
-
+ENV NB_USER=suman
+ENV NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
 
 ENV PATH=/root/miniconda3/bin:/usr/share/perl6/site/bin:$PATH
 
@@ -14,38 +18,34 @@ RUN apt-get update \
     # gcc make used for raku kernel dependencies with compiled C code 
     && rm -rf /var/lib/apt/lists/* \ 
     && wget https://repo.anaconda.com/miniconda/Miniconda3-py312_24.5.0-0-Linux-x86_64.sh -O miniconda.sh \
-    && mkdir -p /root/.conda \
+    # && mkdir -p $HOME/miniconda3 \
     && bash miniconda.sh -b -p /root/miniconda3 \
     && rm -f miniconda.sh \
     && conda install -y jupyter notebook jupyterhub \
     && zef -v install https://github.com/bduggan/raku-jupyter-kernel.git \ 
     # && zef install Pod::To::HTML \
     && jupyter-kernel.raku --generate-config \
-    && jupyter notebook --generate-config \
-    && conda clean -a
+    && jupyter notebook --generate-config 
+    # \    && conda clean -a
     
 
-#Enabling Binder..................................
+# #Enabling Binder..................................
 
 
-# ENV NB_USER=suman
-# ENV NB_UID=1000
-# ENV USER ${NB_USER}
-# ENV NB_UID ${NB_UID}
-# # ENV HOME $HOME/${NB_USER}
-# RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
+
     
+RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
+# --disabled-password
+# #For enabling binder..........................
+COPY ./raku-notebooks/ ${HOME}
 
-# # #For enabling binder..........................
-# # COPY ./raku-notebooks/ ${HOME}
+# USER root
+# RUN chown -R ${NB_UID} ${HOME}
 
-# # USER root
-# # RUN chown -R ${NB_UID} ${HOME}
-# USER ${NB_USER} 
-# WORKDIR ${HOME}
-# #..............................................
+WORKDIR ${HOME}
+# # #..............................................
 
-# Make port 8888 available to the world outside this container
+# # Make port 8888 available to the world outside this container
 EXPOSE 8888
 
 CMD ["jupyter", "notebook", "--NotebookApp.default_url=/lab/", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
