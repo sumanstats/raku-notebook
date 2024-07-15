@@ -20,4 +20,5 @@ RUN chown -R ${NB_UID} ${HOME}
 
 USER ${NB_USER}
 
+CMD ["jupyter", "notebook", "--NotebookApp.default_url=/lab/", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
 
