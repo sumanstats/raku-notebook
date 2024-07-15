@@ -39,10 +39,11 @@ RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER
 # #For enabling binder..........................
 COPY ./raku-notebooks/ ${HOME}
 
-USER root
-RUN chown -R ${NB_UID} ${HOME}
-USER ${NB_USER} 
+# USER root
+# RUN chown -R ${NB_UID} ${HOME}
+
 WORKDIR ${HOME}
+# USER ${NB_USER} 
 # # #..............................................
 
 # # Make port 8888 available to the world outside this container
