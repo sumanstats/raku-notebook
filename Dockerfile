@@ -1,4 +1,4 @@
-FROM sumankhanal/raku-notebook@sha256:e1c43cc5315ef0d3853c1633413dbad3a16c2a59144e256646169e0bdd4d3b45
+FROM sumankhanal/raku-notebook@sha256:596df3011b970ba23be62e45ce6654dd502c3e556cde63e057bc1d63136a3cf3
 
 
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
@@ -6,17 +6,16 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 #..............................................
 
 
-    
-
+ENV NB_USER=suman
+ENV NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
+RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
+COPY ./raku-notebooks/ ${HOME}
 
 USER root
-RUN chown -R 1000 /home/suman
+RUN chown -R ${NB_UID} ${HOME}   
 
-WORKDIR /home/suman
-USER suman 
-# # #..............................................
 
-# # Make port 8888 available to the world outside this container
-EXPOSE 8888
-# 
-CMD ["jupyter", "notebook", "--NotebookApp.default_url=/lab/", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+USER ${NB_USER}
